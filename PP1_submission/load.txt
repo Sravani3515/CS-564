@@ -1,0 +1,23 @@
+PRAGMA foreign_keys = ON;
+
+.separator |
+.import Users.dat Users
+
+update Users 
+set location = NULL
+where location = 'NULL';
+
+update Users 
+set country = NULL
+where country = 'NULL';
+
+.import Items.dat Items
+
+UPDATE items
+SET buyPrice = NULL
+WHERE buyPrice = 'NULL';
+
+.import Categories.dat Categories
+.import Bids.dat Bids
+
+
